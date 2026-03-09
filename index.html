@@ -17,7 +17,6 @@ body{background:linear-gradient(135deg,#dff0e8 0%,#cce5d8 50%,#d6eddf 100%);colo
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.3;}
 body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(31,107,74,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(31,107,74,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
 
-/* HUST background watermark */
 .hust-bg{position:fixed;inset:0;z-index:0;pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding-right:6vw;overflow:hidden;}
 .hust-bg-inner{display:flex;flex-direction:column;align-items:flex-end;gap:0;}
 .hust-wordmark{font-family:var(--head);font-weight:700;font-size:clamp(100px,18vw,260px);color:rgba(31,107,74,.13);letter-spacing:-.02em;line-height:1;user-select:none;white-space:nowrap;}
@@ -38,11 +37,8 @@ nav ul a:hover{color:var(--g1);}
 .map-svg circle{fill:var(--g2);opacity:.55;}
 .center-node{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;border:3.5px solid var(--g1);box-shadow:0 0 28px rgba(31,107,74,.2),0 0 64px rgba(31,107,74,.06);overflow:hidden;cursor:pointer;z-index:10;transition:box-shadow .4s;}
 .center-node:hover{box-shadow:0 0 48px rgba(31,107,74,.35),0 0 100px rgba(31,107,74,.12);}
-.avatar-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#b8dece 0%,#8fc8b0 100%);font-family:var(--mono);color:var(--g1);}
-.avatar-placeholder .av-icon{font-size:52px;line-height:1;}
-.avatar-placeholder .av-label{font-size:9px;letter-spacing:.12em;margin-top:6px;opacity:.7;}
-.center-label{position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--head);font-weight:700;font-size:18px;color:var(--g1);letter-spacing:.1em;}
-.center-sub{position:absolute;bottom:-54px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.18em;}
+.center-label{position:absolute;bottom:-38px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--head);font-weight:700;font-size:18px;color:var(--g1);letter-spacing:.1em;}
+.center-sub{position:absolute;bottom:-56px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.18em;}
 .branch{position:absolute;transform:translate(-50%,-50%);z-index:8;}
 .node-card{background:rgba(255,255,255,.82);border:2px solid var(--g5);border-radius:4px;padding:13px 20px;cursor:pointer;transition:border-color .3s,box-shadow .3s,transform .3s;min-width:148px;text-align:center;position:relative;overflow:hidden;}
 .node-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--g2),transparent);opacity:0;transition:opacity .3s;}
@@ -63,7 +59,6 @@ nav ul a:hover{color:var(--g1);}
 .gpa-label{font-family:var(--head);font-size:14px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;padding-bottom:14px;margin-left:8px;}
 
 .courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:32px;}
-/* Score shown inline on hover — no tooltip bubble */
 .course-tag{border:1.5px solid var(--g4);border-left:4px solid var(--g3);padding:13px 18px;font-family:var(--mono);font-size:15px;color:var(--text);letter-spacing:.06em;background:rgba(255,255,255,.6);transition:border-color .25s,background .25s,transform .2s,color .2s;cursor:default;position:relative;}
 .course-tag:hover{border-color:var(--g1);background:rgba(31,107,74,.06);transform:translateX(3px);color:transparent;}
 .course-tag .course-name{transition:opacity .2s;}
@@ -78,11 +73,10 @@ nav ul a:hover{color:var(--g1);}
 .skill-bar-track{height:4px;background:var(--g5);position:relative;border-radius:2px;}
 .skill-bar-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,var(--g3),var(--g1));border-radius:2px;box-shadow:0 0 6px rgba(31,107,74,.25);width:0;transition:width 1.2s cubic-bezier(.16,1,.3,1);}
 .skill-pill-group{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
-.skill-pill{font-family:var(--mono);font-size:13px;border:1.5px solid var(--g4);color:var(--g1);padding:6px 14px;border-radius:2px;letter-spacing:.08em;background:rgba(31,107,74,.10);transition:background .2s,border-color .2s;}
-.skill-pill:hover{background:rgba(31,107,74,.1);border-color:var(--g2);}
+.skill-pill{font-family:var(--mono);font-size:13px;border:1.5px solid var(--g2);color:var(--g1);padding:6px 14px;border-radius:2px;letter-spacing:.08em;background:rgba(31,107,74,.10);transition:background .2s,border-color .2s;}
+.skill-pill:hover{background:rgba(31,107,74,.18);border-color:var(--g1);}
 .cert-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(31,107,74,.08);border:1.5px solid var(--g3);padding:9px 16px;border-radius:3px;font-family:var(--mono);font-size:13px;color:var(--g1);margin-top:6px;}
 
-/* IELTS scorecard */
 .ielts-card{border:2px solid var(--g4);background:rgba(255,255,255,.6);padding:20px 24px;margin-top:18px;position:relative;overflow:hidden;}
 .ielts-card::before{content:'IELTS';position:absolute;right:-8px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--head);font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--g4);opacity:.6;}
 .ielts-overall{display:flex;align-items:baseline;gap:6px;margin-bottom:14px;}
@@ -92,8 +86,6 @@ nav ul a:hover{color:var(--g1);}
 .ielts-sub-item{text-align:center;}
 .ielts-sub-score{font-family:var(--mono);font-size:18px;color:var(--g2);}
 .ielts-sub-label{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.12em;margin-top:2px;}
-.ielts-img-placeholder{margin-top:14px;border:1.5px dashed var(--g4);padding:12px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.1em;cursor:pointer;}
-.ielts-img-placeholder:hover{border-color:var(--g2);color:var(--g2);}
 
 .research-timeline{position:relative;padding-left:32px;}
 .research-timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--g1),var(--g4),transparent);}
@@ -127,11 +119,7 @@ nav ul a:hover{color:var(--g1);}
 .modal-links{display:flex;flex-wrap:wrap;gap:10px;}
 .modal-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;color:var(--g1);border:1.5px solid var(--g3);padding:8px 16px;text-decoration:none;letter-spacing:.1em;transition:background .2s,border-color .2s;}
 .modal-link:hover{background:rgba(31,107,74,.08);border-color:var(--g1);}
-/* Photo placeholder inside modal */
-.photo-slot{width:100%;height:180px;border:2px dashed var(--g4);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.12em;margin-bottom:14px;background:rgba(31,107,74,.03);cursor:pointer;transition:border-color .2s,background .2s;}
-.photo-slot:hover{border-color:var(--g2);background:rgba(31,107,74,.06);}
 
-/* LIFE section — no bold, unified font, no Chinese */
 .life-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .life-card{border:2px solid var(--g5);padding:28px;background:rgba(255,255,255,.6);position:relative;overflow:hidden;transition:border-color .3s,background .3s;}
 .life-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--g3),transparent);transform:scaleX(0);transition:transform .4s;}
@@ -140,8 +128,6 @@ nav ul a:hover{color:var(--g1);}
 .life-card-icon{font-size:28px;margin-bottom:14px;font-family:var(--mono);}
 .life-card-title{font-family:var(--head);font-weight:600;font-size:18px;color:var(--g1);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
 .life-card-body{font-family:var(--body);font-size:15px;font-weight:300;color:var(--text);line-height:1.9;}
-.cert-slot{margin-top:14px;border:1.5px dashed var(--g4);padding:10px 14px;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.12em;text-align:center;cursor:pointer;transition:border-color .2s;}
-.cert-slot:hover{border-color:var(--g2);color:var(--g2);}
 
 footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 64px;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;}
 .footer-name{font-family:var(--head);font-weight:700;font-size:28px;color:var(--g1);letter-spacing:.08em;}
@@ -165,13 +151,10 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
   nav ul a{font-size:13px;}
 
   #hero{padding-top:70px;min-height:auto;padding-bottom:40px;}
-  .mindmap-wrapper{
-    width:320px;height:320px;
-    max-width:92vw;max-height:92vw;
-  }
+  .mindmap-wrapper{width:320px;height:320px;max-width:92vw;max-height:92vw;}
   .center-node{width:80px;height:80px;}
-  .center-label{font-size:14px;bottom:-28px;}
-  .center-sub{font-size:8px;bottom:-42px;}
+  .center-label{font-size:14px;}
+  .center-sub{font-size:8px;}
 
   .node-card{min-width:64px;padding:6px 8px;}
   .node-icon{font-size:13px;margin-bottom:3px;}
@@ -216,67 +199,72 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
   </ul>
 </nav>
 
+<!-- HERO / MINDMAP -->
 <section id="hero" style="max-width:100%;padding:80px 0 0;">
   <div class="mindmap-wrapper">
-<svg class="map-svg" viewBox="0 0 900 900">
-      <!-- top center -->
+
+    <svg class="map-svg" viewBox="0 0 900 900">
+      <!-- top center → Courses -->
       <line x1="450" y1="450" x2="450" y2="108"/><circle cx="450" cy="108" r="4"/>
-      <!-- top right -->
+      <!-- top right → Skills -->
       <line x1="450" y1="450" x2="702" y2="225"/><circle cx="702" cy="225" r="4"/>
-      <!-- mid right -->
+      <!-- mid right → Research -->
       <line x1="450" y1="450" x2="765" y2="450"/><circle cx="765" cy="450" r="4"/>
-      <!-- bot right -->
+      <!-- bot right → Life -->
       <line x1="450" y1="450" x2="702" y2="675"/><circle cx="702" cy="675" r="4"/>
-      <!-- bot left -->
+      <!-- bot left → Language -->
       <line x1="450" y1="450" x2="198" y2="675"/><circle cx="198" cy="675" r="4"/>
-      <!-- mid left -->
+      <!-- mid left → GPA -->
       <line x1="450" y1="450" x2="135" y2="450"/><circle cx="135" cy="450" r="4"/>
-      <!-- top left -->
+      <!-- top left → Hardware -->
       <line x1="450" y1="450" x2="198" y2="225"/><circle cx="198" cy="225" r="4"/>
     </svg>
-<div class="center-node fade-up">
-  <img src="./MyPhoto.JPG" alt="Wang Qinyu" 
-       style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;">
-</div>
+
+    <!-- Center photo node -->
+    <div class="center-node fade-up">
+      <img src="./MyPhoto.JPG" alt="Wang Qinyu"
+           style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;">
     </div>
     <div class="center-label fade-up d1">Wang Qinyu</div>
     <div class="center-sub fade-up d2">BIOMEDICAL ENGINEERING · 2023 · HUST</div>
-<div class="branch fade-up d1" style="top:12%;left:50%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">📐</div><div class="node-title">Courses</div>
-  </div>
-</div>
-<div class="branch fade-up d2" style="top:25%;left:78%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">⚙️</div><div class="node-title">Skills</div>
-  </div>
-</div>
-<div class="branch fade-up d3" style="top:50%;left:85%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#research').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">🔬</div><div class="node-title">Research</div>
-  </div>
-</div>
-<div class="branch fade-up d4" style="top:75%;left:78%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#life').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">🏔️</div><div class="node-title">Life</div>
-  </div>
-</div>
-<div class="branch fade-up d5" style="top:75%;left:22%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">🌐</div><div class="node-title">Language</div>
-  </div>
-</div>
-<div class="branch fade-up d6" style="top:50%;left:15%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">🎯</div><div class="node-title">GPA 82</div>
-  </div>
-</div>
-<div class="branch fade-up d3" style="top:25%;left:22%;transform:translate(-50%,-50%);">
-  <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
-    <div class="node-icon">💡</div><div class="node-title">Hardware</div>
-  </div>
-</div>
+
+    <!-- Branch nodes — top/left % match SVG coords / 900 -->
+    <div class="branch fade-up d1" style="top:12%;left:50%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">📐</div><div class="node-title">Courses</div>
+      </div>
     </div>
+    <div class="branch fade-up d2" style="top:25%;left:78%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">⚙️</div><div class="node-title">Skills</div>
+      </div>
+    </div>
+    <div class="branch fade-up d3" style="top:50%;left:85%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#research').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">🔬</div><div class="node-title">Research</div>
+      </div>
+    </div>
+    <div class="branch fade-up d4" style="top:75%;left:78%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#life').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">🏔️</div><div class="node-title">Life</div>
+      </div>
+    </div>
+    <div class="branch fade-up d5" style="top:75%;left:22%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">🌐</div><div class="node-title">Language</div>
+      </div>
+    </div>
+    <div class="branch fade-up d6" style="top:50%;left:15%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">🎯</div><div class="node-title">GPA 82</div>
+      </div>
+    </div>
+    <div class="branch fade-up d3" style="top:25%;left:22%;transform:translate(-50%,-50%);">
+      <div class="node-card" onclick="document.querySelector('#skills').scrollIntoView({behavior:'smooth'})">
+        <div class="node-icon">💡</div><div class="node-title">Hardware</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -350,7 +338,6 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="100%"></div></div>
       </div>
 
-      <!-- IELTS scorecard with photo slot -->
       <div class="ielts-card">
         <div class="ielts-overall">
           <div class="ielts-band">7.5</div>
@@ -392,7 +379,6 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
         <span class="skill-pill">PyTorch / TF</span>
         <span class="skill-pill">Pandas</span>
         <span class="skill-pill">Scipy</span>
-        
       </div>
       <div class="cert-badge">🏅 National Computer Rank Exam · Level 3 Certified</div>
     </div>
@@ -450,10 +436,11 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
       <br>
       <button class="r-detail-btn" onclick="openModal('modal3')">VIEW PROJECT DETAILS</button>
     </div>
+
     <div class="research-item">
       <div class="r-tag">Project 04 · Mathematical Modeling · MCM/ICM</div>
       <div class="r-period">Jan 2026 – Feb 2026</div>
-      <div class="r-school">🏆 COMAP MCM/ICM 2025</div>
+      <div class="r-school">🏆 COMAP MCM/ICM 2026</div>
       <div class="r-title">From Roster to Returns: An Integrated Model for Competitive-Commercial Strategy Optimization</div>
       <div class="r-desc">Developed a Competitive-Commercial Coupled Framework integrating player capability and injury risk modeling (PCA-based), win-rate prediction via Team Strength and Elo rating, franchise valuation forecasting (log-linear regression), and roster optimization under salary cap constraints.</div>
       <div class="r-tech">
@@ -524,7 +511,7 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
       <div class="life-card-icon">⛷️</div>
       <div class="life-card-title">Alpine Skiing — Certified Instructor</div>
       <div class="life-card-body">
-        Certified alpine ski instructor (National Social Sports Instructor, Level 1), with hands-on coaching experience in carving and parallel technique. The skiing expertise directly informs Project 05 — understanding motion from the inside out gives the system design depth that no purely engineering approach could achieve.
+        Certified alpine ski instructor (National Social Sports Instructor, Level 1), with hands-on coaching experience in carving and parallel technique. The skiing expertise directly informs Project 06 — understanding motion from the inside out gives the system design depth that no purely engineering approach could achieve.
       </div>
     </div>
     <div class="life-card">
@@ -554,7 +541,7 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
     <a class="footer-link" href="mailto:u202313364@hust.edu.cn">EMAIL</a>
     <a class="footer-link" href="https://github.com/CCCCCAC" target="_blank">GITHUB</a>
     <a class="footer-link" href="#">GOOGLE SCHOLAR</a>
-    <a class="footer-link" href="#">CV (PDF)</div></a>
+    <a class="footer-link" href="#">CV (PDF)</a>
   </div>
 </footer>
 
@@ -596,7 +583,7 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
     <div class="modal-title">Wearable Stress Monitoring via Physiological Signals</div>
     <div class="modal-school">🏛 University of North Carolina at Chapel Hill · Jun – Sep 2025</div>
     <div class="modal-body">
-      Summer research at UNC Chapel Hill focused on continuous, non-invasive stress monitoring using multimodal wearable biosignal acquisition. The system integrated multiple physiological channels and explored signal processing pipelines for real-time stress inference — laying the foundation for the ongoing head-worn wearable research in Project 04.
+      Summer research at UNC Chapel Hill focused on continuous, non-invasive stress monitoring using multimodal wearable biosignal acquisition. The system integrated multiple physiological channels and explored signal processing pipelines for real-time stress inference — laying the foundation for the ongoing head-worn wearable research in Project 05.
     </div>
     <div class="modal-section-title">Links</div>
     <div class="modal-links">
@@ -605,14 +592,14 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
     </div>
   </div>
 </div>
+
 <div class="modal-overlay" id="modal_mcm" onclick="closeModalOutside(event,'modal_mcm')">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal_mcm')">✕</button>
     <div class="modal-title">From Roster to Returns: An Integrated Model for Competitive-Commercial Strategy Optimization</div>
     <div class="modal-school">🏆 COMAP MCM/ICM 2026 · Jan – Feb 2026</div>
     <div class="modal-body">
-      <!-- 在这里填写详细项目说明 -->
-      A Competitive-Commercial Coupled Framework that integrates player capability and injury risk modeling, win-rate prediction, franchise valuation forecasting, and roster optimization under salary cap constraints. Submitted to the COMAP Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling 2025.
+      A Competitive-Commercial Coupled Framework that integrates player capability and injury risk modeling, win-rate prediction, franchise valuation forecasting, and roster optimization under salary cap constraints. Submitted to the COMAP Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling 2026.
     </div>
     <div class="modal-section-title">Links</div>
     <div class="modal-links">
@@ -621,7 +608,7 @@ footer{position:relative;z-index:1;border-top:2px solid var(--g5);padding:60px 6
     </div>
   </div>
 </div>
-  
+
 <div class="modal-overlay" id="modal4" onclick="closeModalOutside(event,'modal4')">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal4')">✕</button>
